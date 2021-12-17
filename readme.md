@@ -1,5 +1,7 @@
 # UnrealCV-datagen
 UnrealCV is a library providing an interface to the Unreal 4 engine through Python.
+![Example Engine Image](/data/UCV1.png)
+![Example Prediction Image](/data/UCV2.png)
 
 Users can quickly use UnrealCV-datagen to access UE4's 3D environment to generate light and accompanying depth images to train neural networks on generated synthetic data.
 
@@ -9,14 +11,13 @@ UnrealCV-datagen comes with a simple example so that users can quickly integrate
 - Install Unreal Engine 4 (Version 4.16 recommended)
 - Install UnrealCV
 	- See https://github.com/unrealcv/unrealcv
-- From the repository directory
+- In the repository directory:
 	- pip3 install -r requirements.txt
 
 ## Usage
 - Use localhost, or the IP of the machine running Unreal Engine 4.
 - Import client module to access trainData and testData (numpy arrays)
 	
-
 
 ## Example
 This example trains a Pytorch single layer neural network to estimate depth from light images.
@@ -31,15 +32,15 @@ Input is light images generated in real time in UnrealCV trained against depth i
 
 ## Arguments
 
-Required:
--object <object to manipulate>
-	This is the name of the object in the  World Outliner in UE4 that will be manipulated and have images generated of
+### Required:
+	-object <object to manipulate>
+		This is the name of the object in the  World Outliner in UE4 that will be manipulated and have images generated of
 
-Others:
--ip <ip address>
-	When not used, value defaults to localmachine. Note that default UnrealCV port of :9000 is always used.
--plot
-	signal to program whether or not to plot training data for debugging
+### Others:
+	-ip <ip address>
+		When not used, value defaults to localmachine. Note that default UnrealCV port of :9000 is always used.
+	-plot
+		signal to program whether or not to plot training data for debugging
 
 ## TODO
 Add ability to generate image and depth data and save to disk for later access
