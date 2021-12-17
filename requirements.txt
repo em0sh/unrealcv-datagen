@@ -1,0 +1,9 @@
+numpy         
+opencv-python 
+Pillow        
+pip           
+setuptools    
+UnrealCV      
+wheel         
+matplotlib
+torch
